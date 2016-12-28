@@ -9,11 +9,11 @@ class Config:
     MAIL_SERVER = 'smtp.126.com'
     MAIL_PORT = 25
     MAIL_USE_TLS = True
-    MAIL_USERNAME = 'xjlzyi@126.com' #os.getenv('MAIL_USERNAME')
-    MAIL_PASSWORD = 'Aa123456' #os.getenv('MAIL_PASSWORD') #授权码
+    MAIL_USERNAME = 'xxxx@126.com' #os.getenv('MAIL_USERNAME')
+    MAIL_PASSWORD = 'xxxx' #os.getenv('MAIL_PASSWORD') #授权码
     FLASKY_MAIL_SUBJECT_PREFIX = '[Flasky]'
-    FLASKY_MAIL_SENDER = 'xjlzyi@126.com'
-    FLASKY_ADMIN = '37025130@qq.com'
+    FLASKY_MAIL_SENDER = 'xxxx@126.com'
+    FLASKY_ADMIN = 'xxxx@xx.com'
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
     SQLALCHEMY_TRACK_MODIFICATIONS = True
     SQLALCHEMY_RECORD_QUERIES = True
@@ -28,15 +28,15 @@ class Config:
 
 class DevelopmentConfig(Config):
     DEBUG = True
-    SQLALCHEMY_DATABASE_URI = 'mysql://root:Aa123456@192.168.0.251:3306/test'
+    SQLALCHEMY_DATABASE_URI = 'mysql://root:123456@192.168.0.251:3306/test'
 
 class TestingConfig(Config):
     TESTING = True
     WTF_CSRF_ENABLED = False
-    SQLALCHEMY_DATABASE_URI = 'mysql://root:Aa123456@192.168.0.251:3306/test'
+    SQLALCHEMY_DATABASE_URI = 'mysql://root:123456@192.168.0.251:3306/test'
 
 class ProductionConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'mysql://root:Aa123456@192.168.0.251:3306/test'
+    SQLALCHEMY_DATABASE_URI = 'mysql://root:123456@192.168.0.251:3306/test'
 
     @classmethod
     def init_app(cls, app):
